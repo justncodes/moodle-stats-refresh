@@ -97,12 +97,10 @@ python refresh_moodle_stats_requests.py -C /path/to/other_config.ini
 python refresh_moodle_stats_requests.py -C /path/to/other_config.ini -q /another/path/to/quiz_ids.txt
 ```
 
-*(Note: The `-d` / `--delay` command-line argument has been removed. Control delay via `request_delay_seconds` in `config.ini`)*
-
 ## Security Considerations
 
-*   **Credentials:** Storing passwords in plain text `config.ini` files has security risks. Ensure the file has strict permissions (readable only by the intended user). Avoid committing this file to version control if it contains real passwords.
-*   **SSL Verification (`verify_ssl`):** The default setting in the example `config.ini` (`verify_ssl = false`) disables SSL certificate verification. This is often necessary for Moodle instances using self-signed certificates internally. **Do not** disable verification (`set verify_ssl = true`) if connecting to a Moodle site with a valid, trusted SSL certificate over the public internet, as disabling bypasses an important security check.
+*   **Credentials:** Storing passwords in plain text `config.ini` files has security risks. Ensure the file has strict permissions (readable only by the intended user).
+*   **SSL Verification (`verify_ssl`):** The default setting in the example `config.ini.example` (`verify_ssl = false`) disables SSL certificate verification. This is often necessary for Moodle instances using self-signed certificates internally. **Do not** disable verification (`set verify_ssl = true`) if connecting to a Moodle site with a valid, trusted SSL certificate over the public internet, as disabling bypasses an important security check.
 
 ## Troubleshooting
 
