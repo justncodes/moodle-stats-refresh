@@ -67,13 +67,13 @@ The script uses the `requests` library to simulate a web browser:
         WHERE m.name = 'quiz'
         ORDER BY cm.id ASC;
         ```
-    *   Save the output of this query to a plain text file. The default filename the script looks for is `quiz_cmids.txt` (as set in `config.ini`), but you can change this in the config or specify a different file using the `-q` command-line option. Each line in the file should contain exactly one `cmid` number.
+    *   Save the output of this query to a plain text file. The default filename the script looks for is `quiz_ids.txt` (as set in `config.ini`), but you can change this in the config or specify a different file using the `-q` command-line option. Each line in the file should contain exactly one `cmid` number.
 
 ## Usage
 
 Run the script from your terminal or command prompt.
 
-**Basic usage (using default `config.ini` and default `quiz_cmids.txt` specified within it):**
+**Basic usage (using default `config.ini` and default `quiz_ids.txt` specified within it):**
 
 ```bash
 python refresh_moodle_stats_requests.py
